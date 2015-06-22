@@ -78,6 +78,6 @@ def intTo62(int10) :
 
 if __name__ == '__main__':
     # 调用
-    print sinaWburl2ID('y1v8Y8MqR');
+    print (sinaWburl2ID('y1v8Y8MqR'))
     # 调用
-    print midToStr('3403580482092801');
+    print (midToStr('3403580482092801'))

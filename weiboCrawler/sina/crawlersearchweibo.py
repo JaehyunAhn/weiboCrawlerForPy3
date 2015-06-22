@@ -17,9 +17,9 @@ from model.log4py import logInfo
 from model.log4py import logWarn
 from model.log4py import logError
 from model import syscontext
-from weibocontent import WeiboBean
+from sina.weibocontent import WeiboBean
 from model.weiboORM import *
-import weibomid
+import sina.weibomid
 
 '''
 线程id代表当前线程处理的是搜索结果的第几页
@@ -67,7 +67,7 @@ class SearchWeiboThread(threading.Thread):
             # print >> result, content
             self.fetch(content)
 
-        except Exception, e:
+        except Exception as e:
             logError(e)
             searchResult = 'error'
             s = sys.exc_info()
@@ -120,7 +120,7 @@ class SearchWeiboThread(threading.Thread):
                         weibo.name = soupii.a['nick-name']
                         weibo.userurl = soupii.a['href']
                         weibo.content = soupii.p.get_text()
-                        weibo.weibourl = weibo.userurl + '/' + weibomid.midToStr(weibo.mid)
+                        weibo.weibourl = weibo.userurl + '/' + sina.weibomid.midToStr(weibo.mid)
                         weibo.weibourl = weibo.weibourl.replace('/u', '')
 
                         # logInfo(weibo)

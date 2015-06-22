@@ -3,17 +3,17 @@
 
 import logging
 import os
-import syscontext
+import model.syscontext
 
 # 创建logger
-logName = syscontext.config.get('logName', 'WeiboCrawler')
+logName = model.syscontext.config.get('logName', 'WeiboCrawler')
 logger = logging.getLogger(logName)
 logger.setLevel(logging.INFO)
 
 # 创建handler，写控制台
 streamHandler = logging.StreamHandler()
 # 创建handler，写文件
-logPath = syscontext.config.get('logPath', './log')
+logPath = model.syscontext.config.get('logPath', './log')
 logFileName = os.path.join(logPath, ("%s.log" % logName))
 fileHandler = logging.FileHandler(logFileName)
 

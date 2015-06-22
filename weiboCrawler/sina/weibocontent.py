@@ -17,4 +17,4 @@ class WeiboBean():
         return '[ ' + self.mid + '|' + self.name + '|' + self.userurl + '|' + self.content + '|' + self.weibourl + ' ]'
 
 if __name__ == '__main__':
-    print WeiboBean()
+    print (WeiboBean())

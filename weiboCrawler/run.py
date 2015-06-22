@@ -14,8 +14,8 @@ def run():
     loginValid = False
 
     # 模拟登录
-    username = syscontext.user.get('un', 'wwang1969@126')
-    password = syscontext.user.get('pw', 'w196988')
+    username = syscontext.user.get('un', '00821043197019')
+    password = syscontext.user.get('pw', 'wn9889zn1')
     file_path = syscontext.config.get('temp', './temp')
     httpproxy = syscontext.config.get('httpproxy', 'http://web-proxy.oa.com:8080')
     # 公司网络，必须走代理
